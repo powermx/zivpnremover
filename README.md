@@ -3,7 +3,7 @@ ZiVPN UDP Remover
 
 Usage:
 ```
-bash <(curl https://raw.githubusercontent.com/powermx/zivpnremover/main/uninstall.sh)>
+bash <(curl https://raw.githubusercontent.com/powermx/zivpnremover/main/uninstall.sh)
 ```
 
 ### ZiVPN
