@@ -1,2 +1,4 @@
 # zivpnremover
 ZiVPN remover
+
+Usage:
