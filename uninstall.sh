@@ -1,10 +1,10 @@
 #!/bin/bash
 # ZiVPN Remover
 echo -e "Uninstalling ZiVPN ..."
-systemctl stop zivpn.services
+systemctl stop zivpn.services 2> /dev/null
 killall zivpn 2> /dev/null
-rm -rf /etc/zivpn
-rm /usr/local/bin/zivpn
+rm -rf /etc/zivpn 2> /dev/null
+rm /usr/local/bin/zivpn 2> /dev/null
 ex=`/usr/local/bin/zivpn`
 if pgrep "zivpn" >/dev/null; then
   echo -e "Server Running"
