@@ -1,5 +1,5 @@
 #!/bin/bash
-# ZiVPN Remover
+# - ZiVPN Remover -
 clear
 echo -e "Uninstalling ZiVPN ..."
 systemctl stop zivpn.services
