@@ -12,7 +12,7 @@ else
   echo -e "Server Stopped"
 fi
 file="/usr/local/bin/zivpn" 1> /dev/null 2> /dev/null
-if [ -e "$file" ]; then
+if [ -e "$file" ] 1> /dev/null 2> /dev/null; then
   echo -e "Files still remaining, try again"
 else
   echo -e "Successfully Removed"
