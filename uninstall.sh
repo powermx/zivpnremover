@@ -11,8 +11,8 @@ if pgrep "zivpn" >/dev/null; then
 else
   echo -e "Server Stopped"
 fi
-if [ -e "$archivo" ]; then
-    echo -e "Files still remaining, try again"
+if [ -e "$ex" ]; then
+  echo -e "Files still remaining, try again"
 else
-    echo -e "Sucessfully Removed"
+  echo -e "Successfully Removed"
 fi
