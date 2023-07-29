@@ -1,9 +1,5 @@
 #!/bin/bash
 # ZiVPN Remover
-if [[ $EUID -ne 0 ]]; then
-    echo "This script works only with root."
-    exit 1
-fi
 echo -e "Uninstalling ZiVPN ..."
 systemctl stop zivpn.services
 killall zivpn 2> /dev/null
