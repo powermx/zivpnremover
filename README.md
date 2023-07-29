@@ -1,4 +1,5 @@
-# ZiVPN
+# `ZiVPN Uninstaller` 
+
 ZiVPN UDP Remover
 
 Usage:
