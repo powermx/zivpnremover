@@ -2,8 +2,10 @@
 # ZiVPN Remover
 clear
 echo -e "Uninstalling ZiVPN ..."
-systemctl stop zivpn.services 1> /dev/null 2> /dev/null
-killall zivpn 1> /dev/null 2> /dev/null
+systemctl stop zivpn.services
+systemctl disable zivpn.service
+rm /etc/systemd/system/zivpn.service 1> /dev/null 2> /dev/null
+killall zivpn 
 rm -rf /etc/zivpn 1> /dev/null 2> /dev/null
 rm /usr/local/bin/zivpn 1> /dev/null 2> /dev/null
 if pgrep "zivpn" >/dev/null; then
@@ -17,3 +19,8 @@ if [ -e "$file" ] 1> /dev/null 2> /dev/null; then
 else
   echo -e "Successfully Removed"
 fi
+echo "Cleaning Cache & Swap Usage"
+echo 3 > /proc/sys/vm/drop_caches
+sysctl -w vm.drop_caches=3
+swapoff -a && swapon -a
+echo -e "Done."
